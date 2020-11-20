@@ -138,7 +138,7 @@
 </template>
 
 <script>
-import El from "./Element";
+import El from "../components/Element";
 export default {
   name: "Container",
   components: { el: El },
