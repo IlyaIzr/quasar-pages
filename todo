@@ -1,7 +1,5 @@
-pass quasar components
+pass quasar components as is attribute to component
 
-id namig
+make relative pathes inside builds
 
 structuring
-
-push to ghpages
