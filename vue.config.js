@@ -1,12 +1,10 @@
 const path = require('path')
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const PORT = 8000
-
 module.exports = {
 
   // My stuff
-  outputDir: 'build',
+  outputDir: 'docs',
   // assetsDir: 'assets',  // or './assets' ??
   filenameHashing: false,
   pages: {

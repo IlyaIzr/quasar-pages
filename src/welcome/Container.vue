@@ -2,7 +2,16 @@
   <div class="q-ma-md q-pa-md rounded-borders">
     <div class="q-my-md q-pa-sm">
       <el
+        :value="data && data.nickname"
+        valueWrapClass="text-orange text-h5"
+        prefix="Добро пожаловать, "
+        prefixClass="q-mr-sm text-h5"
+      />
+    </div>
+    <div class="q-my-md q-pa-sm">
+      <el
         :value="data && data.currentPackage"
+        valueWrapClass="text-orange text-h5"
         prefix="Текущий пакет"
         prefixClass="q-mr-sm text-h5"
       />
@@ -28,7 +37,7 @@
         <el
           :value="data && data.abi"
           valueEl="div"
-          valueWrapClass="q-ma-md"
+          valueWrapClass="q-ma-md text-h5 text-orange"
           postfix="АБИ"
           postfixEl="div"
           postfixClass="text-uppercase q-ma-md"
@@ -41,7 +50,7 @@
         <el
           :value="data && data.profit"
           valueEl="div"
-          valueWrapClass="q-ma-md"
+          valueWrapClass="q-ma-md text-h5 text-orange"
           postfix="Профит"
           postfixEl="div"
           postfixClass="text-uppercase q-ma-md"
@@ -54,7 +63,7 @@
         <el
           :value="data && data.tournaments"
           valueEl="div"
-          valueWrapClass="q-ma-md"
+          valueWrapClass="q-ma-md text-h5 text-orange"
           postfix="Турниров"
           postfixEl="div"
           postfixClass="text-uppercase q-ma-md"
