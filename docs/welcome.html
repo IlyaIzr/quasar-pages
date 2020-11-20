@@ -1,1 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WelcomeVue</title><link href="/css/chunk-vendors.css" rel="stylesheet"><link href="/css/welcome.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-q-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="welcomeVue"></div><script src="/js/chunk-vendors.js"></script><script src="/js/welcome.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WelcomeVue</title><link href="/css/chunk-vendors.css" rel="stylesheet"><link href="/css/welcome.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-q-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="welcomeVue"></div><script src="/js/chunk-vendors.js"></script><script src="/js/welcome.js"></script></body><script>const dummyConfig = {
+    nickname: 'Nick16',
+    currentPackage: '1212',
+    abi: "22",
+    profit: "555 $",
+    tournaments: "50",
+    transactionBtnText: "Сделать перевод",
+    transactionBtnHint: "подсказка",
+    range: "60",
+    winRate: "35%",
+    afc: "15",
+    topScore: "250"
+  }
+  window.onload = function () {
+    setTimeout(() => {
+      window.mainPageData(dummyConfig)
+    }, 2000);
+  }</script></html>
