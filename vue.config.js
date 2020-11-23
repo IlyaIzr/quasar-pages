@@ -1,18 +1,20 @@
-const path = require('path')
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const path = require('path')
+// const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 
   // My stuff
   outputDir: 'docs',
-  // assetsDir: 'assets',  // or './assets' ??
+  // assetsDir: 'rest',  
+  // publicPath: '../',             //  turns src='/js' into src='js'
+  publicPath: process.env.webpack_path,
   filenameHashing: false,
   pages: {
     welcome: {
-      // entry for the page
       entry: 'src/welcome/main.js',
-      // the source template
-      template: 'public/welcome.html',      
+      template: 'public/welcome.html',
+      filename: 'welcomeVue/index.html',
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
       chunks: ['chunk-vendors', 'chunk-common', 'welcome']
@@ -24,19 +26,18 @@ module.exports = {
   configureWebpack: {
     entry: {
       index: './src/main.js',
-      welcome: path.join(__dirname, './src/welcome/main.js')
+      welcome: './src/welcome/main.js'
     },
+    // plugins: [
+    //   new MiniCssExtractPlugin({
+    //     filename: "[name]Vue/[name]Vue.css",
+    //     chunkFilename: "css/[id].css"
+    //   }),
+    // ],
 
-    plugins: [
-      new HtmlWebPackPlugin({
-        template: './public/welcome.html',
-        chunks: ['chunk-vendors', 'chunk-common', 'welcome']
-      }),
-      new HtmlWebPackPlugin({
-        template: './public/index.html',
-        chunks: ['index']
-      }),
-    ]
+    output: {
+      filename: '[name]Vue/[name]Vue.js'
+    }
   },
 
 
